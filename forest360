@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EX03: Image background and 3D Model</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="ant" src="models/ant.obj"></a-asset-item>
+            <img id="forest" crossorigin="anonymous" src="images/forest.jpg">
+        </a-assets>
+        <a-sky id="image-360" radius="10" src="#forest"></a-sky>
+        <a-plane position="0 -6 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
+        <a-entity obj-model="obj: #ant;" scale="4 4 4" position="-2 -2 -7" material="color: brown"></a-entity>
+    </a-scene>
+</body>
+
+</html>
